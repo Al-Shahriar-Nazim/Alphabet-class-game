@@ -20,27 +20,32 @@
     >
       <!-- Home screen -->
       <section
-        class="Home text-white flex justify-center flex-col gap-y-10 min-h-screen items-center hidden"
+        class="Home text-white flex justify-center flex-col gap-y-10 min-h-screen items-center"
+        id="Home-secreen"
       >
         <h1 class="text-8xl uppercase anton-regular">Alpha Case Pro</h1>
         <p class="poppins-extralight text-2xl">
           Unleash Your Keyboard Kung Fu : Press “Enter” to Play
         </p>
-        <button class="btn btn-outline btn-secondary text-2xl">Play Now</button>
+        <button onclick="play()" class="btn btn-outline btn-secondary text-2xl">Play Now</button>
       </section>
       <!-- Playground scereen -->
-      <section class="play-ground">
-        <div class="flex flex-col justify-center gap-20 pt-20 items-center ">
+      <section id="playGround-section" class="play-ground hidden">
+        <div class="flex flex-col justify-center gap-20 pt-20 items-center">
           <!-- screen -->
           <div
             class="artboard artboard-horizontal phone-6 border-[20px] rounded-2xl border-[#010313CC] bg-[#FFFFFFB8]"
           >
-          <div class="flex justify-center">
-            <p class="bg-[#2F2941] w-[396px] text-center text-white text-xl rounded-md pb-2">Don't watch keyboard  while playing...</p>
-          </div>
-       <div class="flex justify-center items-center h-full">
-        <p class="text-black text-9xl font-bold">Y</p>
-       </div>
+            <div class="flex justify-center">
+              <p
+                class="bg-[#2F2941] w-[396px] text-center text-white text-xl rounded-md pb-2"
+              >
+                Don't watch keyboard while playing...
+              </p>
+            </div>
+            <div class="flex justify-center items-center h-full">
+              <p class="text-black text-9xl font-bold">Y</p>
+            </div>
           </div>
           <!-- keyboard  start-->
           <div>
@@ -81,7 +86,7 @@
           <!-- keyboard end -->
 
           <!-- life score -->
-          <div class="flex justify-between w-3/4 ">
+          <div class="flex justify-between w-3/4">
             <!-- button heart -->
             <button class="btn rounded-full px-4 text-[20px] bg-[#894189]">
               Life
@@ -97,7 +102,18 @@
           </div>
         </div>
       </section>
-      <section class="score"></section>
+      <!-- Finnal score section -->
+      <section class="score flex justify-center items-center min-h-screen hidden">
+        <div
+          class="text-white text-center space-y-10 bg-[#CF12E578] p-6 rounded-md"
+        >
+          <h1 class="text-7xl">Score : 14</h1>
+          <button class="btn bg-white text-gray-700 text-lg">Play Again</button>
+          <p class="text-xl">Practice will make you Pro</p>
+        </div>
+      </section>
     </main>
+<script src="/scripts/utilitize.js"></script>
+    <script src="/scripts/scripts.js"></script>
   </body>
 </html>
