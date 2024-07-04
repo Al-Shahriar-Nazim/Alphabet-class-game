@@ -6,7 +6,19 @@
 //     playGroundSection.classList.remove('hidden')
 // }
 
-function play(){
-    hideElementById('Home-secreen')
-    showElementById('playGround-section')
+function continueGame() {
+  const alphabet = getARandomAlphabets();
+  console.log("Your random alphabets :",alphabet)
+  // set randomly generated alphabet to the screen showIt
+  const currentAlphabets = document.getElementById('currents-alphabets')
+  currentAlphabets.innerText=alphabet
+  // set background color
+  setBackgroundById(alphabet)
+
+}
+function play() {
+  hideElementById("Home-secreen");
+  showElementById("playGround-section");
+  continueGame();
+  
 }
